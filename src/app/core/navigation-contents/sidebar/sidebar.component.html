@@ -1,0 +1,62 @@
+<nav id="sidebar" [ngClass]="isOpen ? 'active' : ''">
+
+  <ul *ngIf="isAdmin" class="list-unstyled sidebar-items">
+    <div align="center"><img src="../../../../assets/image/logo.png" width="100%" height="100%"></div>
+    <li>
+      <a routerLink="/home/employees" routerLinkActive="active">Employee</a>
+    </li>
+    <li>
+      <a routerLink="/home/leaverequests" routerLinkActive="active">Leave Request</a>
+    </li>
+    <li>
+      <a routerLink="/home/leavetypes" routerLinkActive="active">Leave Type</a>
+    </li>
+    <li>
+      <a routerLink="/home/event/types" routerLinkActive="active">EPI Type</a>
+    </li>
+    <li>
+      <a routerLink="/home/event/stock" routerLinkActive="active">EPI Stock</a>
+    </li>
+    <li>
+      <a routerLink="/home/event" routerLinkActive="active">EPI Request</a>
+    </li>
+  </ul>
+  <ul *ngIf="isRh" class="list-unstyled sidebar-items">
+    <div align="center"><img src="../../../../assets/image/logo.png" width="100%" height="100%"></div>
+    <li>
+      <a routerLink="/home/employees" routerLinkActive="active">Employee</a>
+    </li>
+    <li>
+      <a routerLink="/home/leaverequests" routerLinkActive="active">Leave Request</a>
+    </li>
+    <li>
+      <a routerLink="/home/leavetypes" routerLinkActive="active">Leave Type</a>
+    </li>
+  </ul>
+  <ul *ngIf="isHse" class="list-unstyled sidebar-items">
+    <div align="center"><img src="../../../../assets/image/logo.png" width="100%" height="100%"></div>
+    <li>
+      <a routerLink="/home/leaverequests" routerLinkActive="active">Leave Request</a>
+    </li>
+    <li>
+      <a routerLink="/home/event/types" routerLinkActive="active">EPI Type</a>
+    </li>
+    <li>
+      <a routerLink="/home/event/stock" routerLinkActive="active">EPI Stock</a>
+    </li>
+    <li>
+      <a routerLink="/home/event" routerLinkActive="active">EPI Request</a>
+    </li>
+  </ul>
+  
+  <ul *ngIf="isEmploye" class="list-unstyled sidebar-items">
+    <div align="center"><img src="../../../../assets/image/logo.png" width="100%" height="100%"></div>
+    <li>
+      <a routerLink="/home/leaverequests" routerLinkActive="active">Leave Request</a>
+    </li>
+    <li>
+      <a routerLink="/home/event" routerLinkActive="active">EPI Request</a>
+    </li>
+  </ul>
+
+</nav>

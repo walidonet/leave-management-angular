@@ -1,0 +1,38 @@
+<form [formGroup]="eventForm" (ngSubmit)="onSubmit()" class="mx-auto col-md-6 offset-md-4 form-box">
+
+    <div *ngIf="!!create_event_msg" [ngClass]="has_error ? 'alert alert-danger': 'alert alert-info'">{{create_event_msg}}</div>
+  
+    <h4 class="mb-3 form-title"> Create New EPI </h4>
+  
+    <div class="form-group row">
+      <label for="title" class="col-sm-3 col-form-label">Title&nbsp;<span class="text-danger">*</span></label>
+      <div class="col-sm-9">
+        <input type="text" id="title" formControlName="title" class="form-control" placeholder="EPI Title"
+          [ngClass]="{ 'is-invalid': submitted && f.title.errors }" />
+        <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+          <div *ngIf="f.title.errors.required">Title is required</div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="!loading" class="form-group row">
+      <label for="type" class="col-sm-3 col-form-label">Epi Type&nbsp;<span class="text-danger">* </span></label>
+      <div class="col-sm-9">
+        <ng-select [items]="eventTypes" formControlName="type" bindLabel="groupName" bindValue="groupName"
+          placeholder="Select Leave Type" class="custom-ngSelect" [ngClass]="{ 'is-invalid': submitted && f.leaveType.errors }">
+        </ng-select>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="nbr" class="col-sm-3 col-form-label">nbr&nbsp;<span class="text-danger">*</span></label>
+      <div class="col-sm-9">
+        <input type="text" id="type" formControlName="nbr" class="form-control" placeholder="nbr type"
+          />
+      </div>
+    </div>
+  
+  
+    <button mat-raised-button color="primary" class="mt-3 btn-block" type="submit">Submit </button>
+  
+  </form>
