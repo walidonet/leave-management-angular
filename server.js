@@ -3,9 +3,11 @@
 const express = require('express');
 const app = express();
 
+//app.use(requireHTTPS);
+app.use(express.static('./dist/leave-management-angular'));
 
-app.use('/',express.static('./dist/leave-management-angular'));
+app.get('/*', (req, res) =>
+  res.sendFile('index.html', {root: 'dist/angular-heroku/'}),
+);
 
-
-console.log('aaaaaa')
-app.listen(8070, () => console.log(`API running on `));
+app.listen(process.env.PORT || 8070);
