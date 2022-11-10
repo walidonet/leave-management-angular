@@ -2,7 +2,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { EmployeeLeaveService } from './../../services/employeeLeave.service';
 import { Component, OnInit } from '@angular/core';
-import { EmployeeLeave } from '../../model/EmployeeLeave';
+import { EmployeeLeave } from '../../model/employeeLeave';
 
 @Component({
   selector: 'app-leaverequest-details',
