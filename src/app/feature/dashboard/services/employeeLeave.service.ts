@@ -4,7 +4,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Constant } from '../constant/constant';
-import { EmployeeLeave } from '../model/EmployeeLeave';
+import { EmployeeLeave } from '../model/employeeLeave';
 
 @Injectable()
 export class EmployeeLeaveService {

@@ -4,7 +4,7 @@ import { Observable, Subject, concat, of } from 'rxjs';
 import { EmployeeLeaveService } from './../../services/employeeLeave.service';
 import { Component, OnInit } from '@angular/core';
 import { LeaveTypeService } from '../../services/leaveType.service';
-import { EmployeeLeave } from '../../model/EmployeeLeave';
+import { EmployeeLeave } from '../../model/employeeLeave';
 
 @Component({
   selector: 'app-leaverequest-manage',
@@ -37,8 +37,8 @@ export class LeaverequestManageComponent implements OnInit {
       toDate: ['', Validators.required]
     }, {validator: this.dateLessThan('fromDate', 'toDate')});
   }
-  
-  
+
+
 
   get f() { return this.leaveForm.controls; }
 
